@@ -6,7 +6,7 @@
 /*   By: jquicuma <jquicuma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 09:46:09 by jquicuma          #+#    #+#             */
-/*   Updated: 2025/03/05 14:06:47 by jquicuma         ###   ########.fr       */
+/*   Updated: 2025/03/05 16:02:03 by jquicuma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,4 +60,22 @@ char	*str_chr(const char *string, int searchedChar)
 	if (string[i] == (char)searchedChar)
 		return ((char *)(string + i));
 	return (NULL);
+}
+
+char	*str_dup(const char *s1)
+{
+	size_t		i;
+	char		*str;
+
+	str = (char *)malloc(sizeof(*s1) * (ft_strlen(s1) + 1));
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (s1[i])
+	{
+		str[i] = s1[i];
+		i++;
+	}
+	str[i] = 0;
+	return (str);
 }

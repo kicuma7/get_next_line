@@ -6,7 +6,7 @@
 /*   By: jquicuma <jquicuma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 09:46:12 by jquicuma          #+#    #+#             */
-/*   Updated: 2025/03/05 14:14:37 by jquicuma         ###   ########.fr       */
+/*   Updated: 2025/03/05 16:10:22 by jquicuma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,14 @@
 # include <unistd.h>
 # include <stdlib.h>
 
+typedef struct	t_line
+{
+	char			*content;
+	struct t_line	*next;
+}				s_line;
+
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 10
+#  define BUFFER_SIZE 7
 # endif
 
 char	*get_next_line(int fd);
