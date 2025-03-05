@@ -54,3 +54,4 @@ dkms.conf
 # main file
 
 main.c
+test_file
